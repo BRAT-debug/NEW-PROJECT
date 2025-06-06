@@ -1,64 +1,27 @@
-# PlantPal: AI Plant Health Monitor
+# Project Title  
+**AI-based Player Behavior Profiling and Fairness Analysis in Online Poker**
 
-Final project for the Building AI course
+## Summary  
+This project aims to build an AI system that profiles player behavior in online poker games to identify potential patterns of collusion or unfair play. By analyzing betting patterns, timing, and game decisions from large-scale online poker datasets, the AI will detect anomalies and flag suspicious behavior for further investigation.
 
-## Summary
+## Background  
+Online poker is a popular card game with millions of players worldwide. Unlike live poker, online poker is more vulnerable to collusion and unfair play because players cannot see each other’s physical tells, and communication between players can occur unnoticed.
 
-PlantPal is an AI-powered app that helps users monitor the health of their houseplants by analyzing leaf images to detect diseases, pests, or nutrient deficiencies. It provides care tips to keep plants thriving.
+While many anti-cheating measures exist, automated detection of subtle behavioral patterns indicative of collusion is still an open challenge. This project leverages AI to automatically analyze historical online poker hand histories to identify unusual cooperative behaviors or suspicious betting patterns.
 
-## Background
+## How is it used?  
+Initially, the system is trained on hand histories from known fair games and documented collusion cases to learn typical and atypical player behavior. Once trained, the AI can analyze new game logs in real-time or in batch mode to detect suspicious player groups and flag hands or players exhibiting collusive traits.
 
-Houseplant care is increasingly popular but many people struggle to identify early signs of plant stress or disease. Common problems include:
-* Misdiagnosing plant diseases and pests
-* Over- or under-watering due to lack of feedback
-* Difficulty in identifying nutrient deficiencies
+The flagged cases can be reviewed by human experts to decide on further action, such as investigation or banning. The AI thus acts as a fast, scalable first-line defense to improve fairness in online poker platforms.
 
-This project aims to make plant care accessible, reduce plant loss, and increase user confidence in gardening.
+## Data Sources and AI Methods  
+- Data will be gathered from public poker hand databases and online poker platforms that provide hand histories (including player actions, bet sizes, timings, outcomes).  
+- Techniques: Sequence modeling (LSTM/Transformer) to model player actions over time, anomaly detection algorithms (autoencoders, isolation forest), graph-based analysis to detect suspicious player interaction networks.
 
-## How is it used?
+## Challenges  
+- Lack of labeled data for collusion cases may require semi-supervised or unsupervised learning approaches.  
+- Player strategies vary widely, so distinguishing collusion from advanced legitimate strategies can be difficult.  
+- Real-time detection demands efficient models that scale to large datasets.
 
-Users simply take a photo of their plant’s leaves with their smartphone. The AI model analyzes the image and returns:
-* Possible diagnoses (disease, pest, deficiency)
-* Severity level
-* Personalized care instructions (watering, light, treatment)
-
-It’s useful for home gardeners, office plant caretakers, and plant shops. The app can be used anytime a user suspects a plant is unhealthy or just for routine checkups.
-
-![PlantPal Screenshot](https://example.com/plantpal_screenshot.png)
-
-```python
-def diagnose_plant(image):
-    # Load image and preprocess
-    processed_img = preprocess(image)
-    # Predict disease or deficiency
-    diagnosis = model.predict(processed_img)
-    return diagnosis
-## Data sources and AI methods
-
-Plant images and disease labels were collected from publicly available datasets such as PlantVillage. We use a convolutional neural network (CNN) trained on thousands of leaf images for classification.
-
-| Syntax       | Description                                             |
-|--------------|---------------------------------------------------------|
-| CNN          | Convolutional Neural Network for image classification   |
-| Preprocessing| Resizing, normalization, and augmentation of images     |
-
-## Challenges
-
-* Limited dataset diversity may reduce accuracy on rare plants or diseases.
-* The app cannot replace expert botanical advice for complex cases.
-* Ethical considerations include privacy of user-uploaded images and responsible usage advice to avoid misuse of chemicals.
-
-## What next?
-
-Future work could include:
-
-* Expanding the dataset with user-contributed images to improve model accuracy.
-* Adding pest detection using video input.
-* Multilingual support for global accessibility.
-* Integration with smart watering devices for automated plant care.
-
-## Acknowledgments
-
-* Inspired by PlantVillage dataset and research community
-* Model architecture based on open-source CNN implementations
-* Image: Plant Leaf by John Doe / CC BY 4.0
+## What next?  
+If successful, the system could be integrated into online poker platforms to provide continuous monitoring and improve player trust. The approach may also extend to other online competitive games vulnerable to collusion or unfair collaboration.
