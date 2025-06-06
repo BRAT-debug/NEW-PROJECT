@@ -25,3 +25,10 @@ The flagged cases can be reviewed by human experts to decide on further action, 
 
 ## What next?  
 If successful, the system could be integrated into online poker platforms to provide continuous monitoring and improve player trust. The approach may also extend to other online competitive games vulnerable to collusion or unfair collaboration.
+
+## Acknowledgments
+
+- This project was inspired by research and initiatives in online game fairness and cheating detection, including work on bridge opening lead analysis by Nicolas Hammond.  
+- Thanks to the open-source poker hand history datasets and tools that made this research possible.  
+- Special thanks to the developers of machine learning libraries such as TensorFlow and PyTorch, which enable building advanced AI models efficiently.  
+- Any other code, data, or resources borrowed from open-source projects or public repositories are credited appropriately in the codebase.
