@@ -1,5 +1,5 @@
-# Project Title  
-**AI-based Player Behavior Profiling and Fairness Analysis in Online Poker**
+# AI-based Player Behavior Profiling and Fairness Analysis in Online Poker
+
 
 ## Summary  
 This project aims to build an AI system that profiles player behavior in online poker games to identify potential patterns of collusion or unfair play. By analyzing betting patterns, timing, and game decisions from large-scale online poker datasets, the AI will detect anomalies and flag suspicious behavior for further investigation.
